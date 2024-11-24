@@ -1,0 +1,41 @@
+{% extends "layout/ecommerce_base.html" %}
+{%load static%}
+{% block content %}
+
+    <!-- inicio do main/corpo -->
+    <main>
+
+        <!-- inicio do cadastro_dental -->
+        <section class="hero-section">
+
+            <div class="cards">
+                <h1 style="color: #5F1BE3;">Cadastro</h1>
+                <a href="#" class="button" style="background-color: #96949B;">Dental</a>
+                <article class="card">
+                    <form method="post" src="{% url "cadastro_dental" %}" >
+                    {% csrf_token %}
+                    <input class="input" name="nome_empresa" placeholder="Nome da empresa" type="text">
+                    <input class="input" name="email" placeholder="Email" type="email">
+                    <input class="input" name="pass" placeholder="Senha" type="password">
+                    <div class="flex-center">
+                        <input class="input" style="margin-right: 5px;" name="contato" placeholder="Celular" type="text">
+                        <input class="input" style="margin-left: 5px;" name="cnpj" placeholder="CNPJ" type="text">
+                    </div>
+                    <input class="input" name="cep" placeholder="CEP" type="text">
+                    <div class="flex-center">
+                        <input class="input" style="margin-right: 5px;" name="end" placeholder="Endereço" type="text">
+                        <input class="input" style="margin-left: 5px;" name="num" placeholder="Numero" type="number">
+                    </div>
+                    <input class="input" name="comp" placeholder="Complemento" type="text">
+
+                    <button type="submit" class="buttonC mt-2" style="background-color: #5F1BE3;">Enviar</button>
+                    </form>
+                </article>
+
+            </div>
+        </section>
+        <!-- fim do cadastro_dental -->
+
+    </main>
+    <!-- fim do main/corpo -->
+{% endblock %}

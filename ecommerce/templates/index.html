@@ -1,0 +1,86 @@
+{% extends "layout/ecommerce_base.html" %}
+{%load static%}
+{% block content %}
+    <!-- inicio do main/corpo -->
+    <main>
+        <!-- inicio do carrosel -->
+        <section class="hero-section">
+            <div id="carouselExampleIndicators" class="carousel slide" style="width: 80%; margin: auto;;">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                  <div class="carousel-item active">
+                    <img src="{% static "img/a7948c80_1.png" %}" class="d-block w-100" style="object-fit: cover; object-position: center center;" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static "img/a7948c80_2.png" %}" class="d-block w-100" style="object-fit: cover; object-position: center center;" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static "img/a7948c80_3.png" %}" class="d-block w-100" style="object-fit: cover; object-position: center center;" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" style="position: absolute;top: 50%;transform: translateY(-50%);left: -50px;">
+                  <span class="carousel-control-prev-icon" aria-hidden="true" style="color: black;"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" style="position: absolute;top: 50%;transform: translateY(-50%);right: -50px;">
+                    <span class="carousel-control-next-icon" aria-hidden="true" style="color: black;"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+              </div>
+        </section>
+        <!-- fim do carrosel -->
+
+        <!-- inicio do CardPlanos -->
+        <section class="hero-section">
+            <h1 style="color: #5F1BE3;">Planos</h1>
+            <div class="cards">
+                <article class="card">
+                    <img class="starss" src="{% static "img/star1.png" %}" alt="">
+                    <strong>Plano 1</strong>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed adiam nonummy nibh eusimod tinicidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud</p>
+                    <a href="#" class="buttonC" style="background-color: #5F1BE3;">Comece agora</a>
+                </article>
+                <article class="card">
+                    <img class="starss" src="{% static "img/star3.png" %}" alt="">
+                    <strong>Plano 2</strong>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed adiam nonummy nibh eusimod tinicidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud</p>
+                    <a href="#" class="buttonC" style="background-color: #5F1BE3;">Comece agora</a>
+                </article>
+                <article class="card">
+                    <img class="starss" src="{% static "img/star5.png" %}" alt="">
+                    <strong>Plano 3</strong>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed adiam nonummy nibh eusimod tinicidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud</p>
+                    <a href="#" class="buttonC" style="background-color: #5F1BE3;">Comece agora</a>
+                </article>
+            </div>
+
+            <h2 class="text-center">E <span style="color: #5F1BE3;">varios</span> outros!</h2>
+            <a href="#" class="button mt-2 mx-auto" style="background-color: #32e6e0; border-radius: 20px;">Conhecer Planos</a>
+        </section>
+        <!-- fim do CardPlanos -->
+
+        <!-- inicio sobre -->
+        <div class="sobre">
+                <div class="div-sobre">
+                    <img src="{% static "img/sobre-home.png" %}" alt="">
+                </div>
+            <section class="courses-section">
+                <div>
+                    <div class="about">
+                        <label for="">Sobre nós</label>
+                        <br>
+                        <p class="titulo">A melhor maneira de orçar materiais odontológicos</p>
+                        <p class="conteudo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed adiam nonummy nibh eusimod tinicidunt ut laoreet dolore magna</p>
+                        <a href="#" class="button mt-2 mx-auto" style="color: #fff;background-color:  #5F1BE3; border-radius: 20px;">Saiba mais</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- fim sobre -->
+    </main>
+    <!-- fim do main/corpo -->
+{% endblock %}

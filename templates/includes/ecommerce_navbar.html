@@ -1,0 +1,20 @@
+{% load static%}
+<header>
+    <div class="containe">
+        <img class="logo" src="{% static "img/LogoRecorte.png" %}" alt="">
+        <div>
+            <nav>
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'destaque'%}">Destaque</a>
+                <a href="#">Sobre</a>
+                <a href="#">Serviços</a>
+                <a href="#">Contato</a>
+                <a href="{% url 'login'%}" style="color: #5F1BE3;">Login</a>
+            </nav>
+            <div class="bt">
+                <a href="{% url 'cadastro_dental'%}" class="button1" style="background-color: #96949B;">Dental</a>
+                <a href="{% url 'cadastro_dentista'%}" class="button1" style="background-color: #5F1BE3;">Dentista</a>
+            </div>
+        </div>
+    </div>
+</header>

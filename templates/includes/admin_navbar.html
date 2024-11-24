@@ -1,0 +1,19 @@
+{% load static%}
+<header>
+    <div class="containe">
+        <img class="logo" src="{% static "img/LogoRecorte.png" %}" alt="">
+        <div>
+            <nav>
+                <a href="{% url 'todos_dental' %}">Dental (Todos)</a>
+                <a href="{% url 'odonto_pendente' %}">Dental (Pendentes)</a>
+                <a href="#">Sobre</a>
+                <a href="#">Serviços</a>
+                <a href="#">Contato</a>
+            </nav>
+            <div class="bt">
+                <a href="{% url 'cadastro_dental'%}" class="button1" style="background-color: #96949B;">Dental</a>
+                <a href="{% url 'cadastro_dentista'%}" class="button1" style="background-color: #5F1BE3;">Dentista</a>
+            </div>
+        </div>
+    </div>
+</header>

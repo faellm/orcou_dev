@@ -1,0 +1,403 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+   }
+   
+   .carousel-control-next-icon {
+     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+   }
+
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --color-primary: #5F1BE3;
+    --color-secondary: #4DDBDF;
+    --color-black: #000;
+    --color-white: #fff;
+}
+
+.cp{
+    color: var(--color-primary);
+}
+.cs{
+    color: var(--color-secondary);
+}
+
+body{
+    background: #f9f9f9;
+}
+header{
+    box-shadow: rgba(0, 0, 0, 0.45) 0 10px 15px -10px;
+}
+
+header,
+.hero-section,
+.courses-section,
+footer{
+    /* border-color: var(--color-black);
+    border-style: solid;
+    border-width: 0 1px 1px 1px; */
+    padding: 1.25rem;
+}
+
+.logo{
+    width: 100px;
+}
+header img {
+    display: block;
+    margin: 1rem auto;
+}
+
+header nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1rem auto 0;
+}
+
+nav a{
+    color: var(--color-black);
+    font-size: 1.25rem;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+header nav a:nth-child(2n-1){
+    text-align: right;
+}
+.bt{
+    width: auto;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+}
+.button{
+    color: var(--color-white);
+    font-size: 1.25rem;
+    padding: .75rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin: 0 ;
+}
+
+.button1{
+    color: var(--color-white);
+    font-size: 1.25rem;
+    padding: .75rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin: 0 7px 0 7px;
+}
+
+.buttonC{
+    color: var(--color-white);
+    font-size: 1.25rem;
+    padding: .75rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin: 0 7px 0 7px;
+}
+
+.hero-section{
+    max-width: 100%;
+}
+.hero-section img{
+    margin: 0 0 0 auto;
+    max-width: 100%;
+}
+h1{
+    font-size: 3rem;
+    line-height: 105%;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+.hero-section p{
+    font-size: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.hero-section .button{
+    position: relative;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    margin-top: 3rem;
+
+}
+
+.card{
+    background-color: var(--color-white);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    max-width: 40rem;
+    padding: 2rem 2rem 3rem 2rem;
+    border-radius: 30px;
+}
+
+
+
+
+
+.card strong{
+    font-size: 2rem;
+    margin: 0 auto;
+
+}
+
+.card a{
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.sobre{
+    margin: 3rem 0 3rem 0;
+}
+.sobre img{
+    max-width: 100%;
+}
+
+footer{
+    box-shadow: rgba(0, 0, 0, 0.45) 0 10px 15px 10px;
+}
+
+footer .container{
+    display: flex;
+    justify-content: center;
+}
+footer nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1rem auto 0;
+}
+
+footer nav a{
+    display: block;
+    padding-left: 0;
+}
+
+.input {
+    max-width: 100%;
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: .15rem 1.5rem;
+    min-height: 50px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    line-height: 1.15;
+    box-shadow: #242424 0px 10px 20px -18px;
+    margin-bottom: 1.5rem;
+}
+  
+input:focus {
+    border-bottom: 2px solid var(--color-primary);
+}
+  
+input:hover {
+    outline: 1px solid lightgrey;
+}
+
+
+
+
+
+
+/* Ultilitarios */
+
+.mt-1{
+    margin-top: 1rem;
+}
+
+.mt-2{
+    margin-top: 2rem;
+}
+
+.mb-1{
+    margin-bottom: 1rem;
+}
+
+.mb-2{
+    margin-bottom: 2rem;
+}
+.ml-1{
+    margin-left: 1rem;
+}
+.mr-1{
+    margin-right: 1rem;
+}
+
+.mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-center{
+    text-align: center;
+}
+
+.flex-ns{
+    display: block;
+}
+.flex-center{
+    display: flex !important;
+    justify-content: center !important;
+}
+.flex-lts{
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+
+
+/* responsivo */
+
+@media screen and (min-width: 40rem) {
+    header nav{
+        display: block;
+        text-align: center;
+    }
+    .cards{
+        align-items: center;
+    }
+    .card:nth-child(2n){
+        margin-left: 0;
+    }
+    
+    .sobre div{
+        margin: 0 auto;
+    }
+    .div-sobre{
+        display: flex;
+        justify-content: center;
+    }
+
+}
+@media screen and (min-width: 48rem){
+    header div{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header img,
+    header nav,
+    header .button{
+        margin: 0;
+    }
+    .sobre img {
+        max-width: 600px;
+        width: 1000px;
+    }
+    
+}
+
+@media screen and (min-width: 60rem){
+    .sobre img {
+        max-width: 600px;
+        width: 1000px;
+    }
+    .button{
+        width: 10%;
+    }
+}
+
+@media screen and (min-width: 72rem){
+    h1,h2{
+        font-size: 4rem;
+    }
+    .containe{
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 72rem;
+    }
+    
+    .courses-section {
+        padding: 5.5rem 1rem 5.5rem 10rem;
+    }
+
+    .sobre{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    /* coloca ou tira a imagem do sobre-home do canto direito */
+    .sobre div{
+        margin: 0;
+    }
+
+    .about{
+        flex: 2;
+    }
+    .about p{
+       font-size: 1.25rem;  
+       max-width: 30rem; 
+    }
+    .about .titulo{
+        display: inline;
+        font-size: 2.5rem;
+    }
+
+    footer nav{
+        display: flex;
+        flex-direction: row;
+    }
+    .fm{
+        flex: 3;
+    }
+    .sobre img {
+        max-width: 600px;
+        width: 1000px;
+    }
+    
+    
+}
+@media screen and (min-width: 90rem){
+    .containe{
+        max-width: 100rem;
+    }
+    .carousel-inner{
+        height: 40rem;
+    }
+    .carousel-item{
+        height: 100%;
+        object-fit: contain;
+    }
+    .sobre img {
+        max-width: 1000px;
+        width: 1000px;
+    }
+}

@@ -1,0 +1,57 @@
+{% extends "layout/ecommerce_base.html" %}
+{%load static%}
+{% block content %}
+
+    <!-- inicio do main/corpo -->
+    <main>
+
+        <!-- inicio do cadastro_dentista -->
+        <section class="hero-section">
+            
+            <div class="cards">
+                <h1 style="color: #5F1BE3;">Cadastro</h1>
+                <a href="#" class="button" style="background-color: #96949B;">Dentista</a>
+                <article class="card">
+                    <form method="POST" action="{% url 'cadastro_dentista' %}">
+                        {% csrf_token %}
+                        <div class="flex-center">
+                            <input class="input" style="margin-right: 5px;" name="primeiro_nome" placeholder="Primeiro nome" type="text">
+                            <input class="input" style="margin-left: 5px;" name="segundo_nome" placeholder="Segundo nome" type="text">
+                        </div>
+                        <input class="input" name="nome_usr" placeholder="Nome do usuario" type="text">
+                        <input class="input" name="email" placeholder="Email" type="email">
+                        <input class="input" name="pass" placeholder="Senha" type="password">
+                        <div class="flex-center">
+                            <input class="input" style="margin-right: 5px;" name="contato" placeholder="Celular" type="text">
+                            <input class="input" style="margin-left: 5px;" name="cro" placeholder="CRO" type="text">
+                        </div>
+                        <input class="input" name="cep" placeholder="CEP" type="text">
+                        <div class="flex-center">
+                            <input class="input" style="margin-right: 5px;" name="end" placeholder="Endereço" type="text">
+                            <input class="input" style="margin-left: 5px;" name="num" placeholder="Numero" type="number">
+                        </div>
+                        <input class="input" name="comp" placeholder="Complemento" type="text">
+                        <select class="input cp">
+                            <option value="nenhum">Plano</option>
+                            <option value="Plano1">Plano1</option>
+                            <option value="Plano2">Plano2</option>
+                            <option value="Plano3">Plano3</option>
+                        </select> 
+                        <select class="input cp">
+                            <option value="nenhum">Métodos de pagamento</option>
+                            <option value="boleto">Boleto</option>
+                            <option value="pix">PIX</option>
+                            <option value="crt_deb">Cartão de Débito</option>
+                            <option value="crt_cred">Cartão de Crédito</option>
+                        </select> 
+
+                        <button type="submit" href="{% url 'cadastro_dentista' %}" class="buttonC mt-2" style="background-color: #5F1BE3;">Enviar</button>
+                    </form>
+                </article>
+            </div>
+        </section>
+        <!-- fim do cadastro_dentista -->
+        
+    </main>
+    <!-- fim do main/corpo -->
+{% endblock %}
